@@ -1,0 +1,216 @@
+%\documentclass[journal]{IEEEtran}
+\documentclass[draftcls,onecolumn,12pt]{IEEEtran}
+\IEEEoverridecommandlockouts
+%\overrideIEEEmargins
+
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[compress]{natbib}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{algcompatible}
+\usepackage{algorithm}
+\usepackage{booktabs}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage{bbm}
+\usepackage{needspace}
+\usepackage{color, colortbl}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+\usetikzlibrary{arrows,automata}
+\usetikzlibrary{positioning}
+\usepackage{filecontents}
+
+\DeclareCaptionFont{mysize}{\fontsize{8}{9.6}\selectfont}
+\captionsetup{font=mysize}
+
+\pagenumbering{gobble}
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicsinfectionpath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
+% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+\addtolength{\textwidth}{-6mm}
+\addtolength{\hoffset}{3mm}
+\addtolength{\textheight}{-0mm}
+\addtolength{\voffset}{4mm}
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+  \theoremstyle{plain}
+  \newtheorem{lem}[thm]{\protect\lemmaname}
+\newtheorem{remark}{Remark}
+\newtheorem{coro}{Corollary}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{define}{Definition}
+\newtheorem{problem}{Problem}
+
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\theoremname}{Theorem}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\newcommand{\Sysbi}{$\mathcal B(\bar A,\bar B)$}
+\newcommand{\Digraph}{$G(\bar A,\bar B)$}
+
+\renewcommand{\thesubsubsection}{\alph{subsubsection})}
+%\renewcommand{\baselinestretch}{1.5}
+
+
+\begin{document}
+\title{}
+\author{%
+\thanks{The authors are with the Department of Electrical and Systems Engineering
+at the University of Pennsylvania, Philadelphia PA 19104.  %
+}}
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+\section{Introduction}
+
+\section{Notation and Preliminaries}\label{sec:prelim}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[htb!!]
+%    \centering
+%    \begin{subfigure}[t]{0.45\textwidth}
+%        \includegraphics[width=\textwidth,height=\textwidth]{./images/.pdf}\\
+%        \caption{}
+%    \end{subfigure}
+%    \hspace{-0.5cm}
+%    \begin{subfigure}[t]{0.45\textwidth}
+%        \includegraphics[width=\textwidth,height=\textwidth]{./images/.pdf}\\
+%        \caption{}
+%    \end{subfigure}
+%    \caption{. }\label{Fig:}
+%\end{figure}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{table}[!h]
+%\centering
+%\begin{tabular}{@{} *4l @{}}    \toprule
+%  \emph{Name of Network} & \emph{Actual \# Pentagons} & \emph{Estimated \# of Pentagons}  & \emph{Percentage Estimation Error} \\ \midrule
+%  Health Network ($n = 2539$) & 13874 & 47929 & $>$ 100\% \\  \bottomrule \hline
+%\end{tabular}\caption{This table shows the comparison between actual number and estimated number of pentagons in different real networks.}\label{Tab:PercentageError}
+%\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Algorithm %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{algorithm}
+%\caption{}\label{alg:}
+%\begin{algorithmic}[1]
+%\REQUIRE
+%\ENSURE
+%\STATEx
+%\STATE
+%\IF{}
+%    \STATE
+%\ELSE
+%    \STATE
+%\ENDIF
+%\algstore{bkbreak}
+%\end{algorithmic}
+%\end{algorithm}
+
+%\begin{algorithm}
+%\begin{algorithmic}[1]
+%\algrestore{bkbreak}
+%\STATEx
+%\STATE
+%\IF{}
+%    \FOR{}
+%        \STATE $k \gets k+1.$
+%    \ENDFOR
+%\ELSE
+%\ENDIF
+%\end{algorithmic}
+%\end{algorithm}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% APPENDIX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{appendices}
+%\section{}\label{appen:proof}
+%\input{appendix_proof}
+%\end{appendices}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Reference %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\small
+\bibliographystyle{IEEEtran}
+{\small \bibliography{reference}}
+
+\end{document}
+
